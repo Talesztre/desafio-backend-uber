@@ -1,33 +1,66 @@
-# desafio-backend-uber
+# Email Microservice
+## Uber Backend Challenge
 
-# Desafio Backend Uber
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
-![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+This project is an API built using **Java, Java Spring, AWS Simple Email Service.**
 
-## Descrição
+The Microservice was developed for my [Youtube Channel](https://youtu.be/eFgeO9M9lLw?si=uyhUXrR-NLEpBW6p), to demonstrate how to solve the [Uber Backend Challenge](https://github.com/uber-archive/coding-challenge-tools/blob/master/coding_challenge.md).
 
-Este projeto é uma solução para o desafio backend da Uber, desenvolvido em Java com Spring Boot. Ele utiliza diversas tecnologias e boas práticas para criar um backend escalável e eficiente.
+## Table of Contents
 
-## Funcionalidades
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Database](#database)
+- [Contributing](#contributing)
 
-- **Autenticação e Autorização**: Implementado com Spring Security.
-- **Gestão de Usuários**: Criação, leitura, atualização e remoção de usuários.
-- **Integração com AWS**: Uso de serviços como S3 para armazenamento de arquivos.
-- **Persistência**: Utiliza JPA com banco de dados relacional.
-- **Testes Automatizados**: Cobertura com JUnit e Mockito.
+## Installation
 
-## Requisitos
+1. Clone the repository:
 
-- **Java 11** ou superior
-- **Maven** para gestão de dependências
-- **Spring Boot** 2.5.0 ou superior
-- **AWS SDK** configurado para acesso aos serviços necessários
+```bash
+git clone https://github.com/Fernanda-Kipper/desafio-backend-uber.git
+```
 
-## Instalação e Execução
+2. Install dependencies with Maven
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Talesztre/desafio-backend-uber.git
+3. Update `application.properties` puting your AWS Credentials
+
+```yaml
+aws.region=us-east-1
+aws.accessKeyId=1111111
+aws.secretKey=111111
+```
+## Usage
+
+1. Start the application with Maven
+2. The API will be accessible at http://localhost:8080
+
+## API Endpoints
+The API provides the following endpoints:
+
+**GET EMAIL**
+```markdown
+POST /api/email/send - Send a e-mail from your sender to the destination
+```
+
+**BODY**
+```json
+{
+  "to": "tales.dbsk12@gmail.com",
+  "subject": "teste",
+  "body": "teste"
+}
+```
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request to the repository.
+
+When contributing to this project, please follow the existing code style, [commit conventions](https://www.conventionalcommits.org/en/v1.0.0/), and submit your changes in a separate branch.
+
+
